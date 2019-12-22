@@ -32,7 +32,7 @@ ES6的特性比较多，在 ES5 发布近 6 年（2009-11 至 2015-6）之后才
 
 
 
-```sh
+```javascript
   class Animal {
     // 构造函数，实例化的时候将会被调用，如果不指定，那么会有一个不带参数的默认构造函数.
     constructor(name,color) {
@@ -81,18 +81,14 @@ ES5不支持原生的模块化，在ES6中模块作为重要的组成部分被�
 
 导出变量
 
-
-
-```sh
+```javascript
 //test.js
 export var name = 'Rainbow'
 ```
 
 ES6将一个文件视为一个模块，上面的模块通过 export 向外输出了一个变量。一个模块也可以同时往外面输出多个变量。
 
-
-
-```sh
+```javascript
  //test.js
  var name = 'Rainbow';
  var age = '24';
@@ -101,9 +97,7 @@ ES6将一个文件视为一个模块，上面的模块通过 export 向外输出
 
 导出函数
 
-
-
-```sh
+```javascript
 // myModule.js
 export function myModule(someArg) {
   return someArg;
@@ -113,9 +107,7 @@ export function myModule(someArg) {
 **`导入(import)`**
  定义好模块的输出以后就可以在另外一个模块通过import引用。
 
-
-
-```sh
+```javascript
 import {myModule} from 'myModule';// main.js
 import {name,age} from 'test';// test.js
 ```
@@ -132,7 +124,7 @@ import {name,age} from 'test';// test.js
 
 
 
-```sh
+```javascript
 // 箭头函数的例子
 ()=>1
 v=>v+1
@@ -156,7 +148,7 @@ e=>{
 
 
 
-```sh
+```javascript
 class PauseMenu extends React.Component{
     componentWillMount(){
         AppStateIOS.addEventListener('change', this.onAppPaused.bind(this));
@@ -173,7 +165,7 @@ class PauseMenu extends React.Component{
 
 
 
-```sh
+```javascript
 class PauseMenu extends React.Component{
     constructor(props){
         super(props);
@@ -194,7 +186,7 @@ class PauseMenu extends React.Component{
 
 
 
-```sh
+```javascript
 class PauseMenu extends React.Component{
     componentWillMount(){
         AppStateIOS.addEventListener('change', this.onAppPaused);
@@ -208,13 +200,13 @@ class PauseMenu extends React.Component{
 }
 ```
 
-### 4.[函数参数默认值](https://links.jianshu.com/go?to=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FJavaScript%2FReference%2FFunctions%2Fdefault_parameters)
+####4.函数参数默认值
 
 > ES6支持在定义函数的时候为其设置默认值：
 
 
 
-```sh
+```javascript
 function foo(height = 50, color = 'red')
 {
    // TODO
@@ -223,9 +215,7 @@ function foo(height = 50, color = 'red')
 
 这样写一般没问题，但当`参数的布尔值为false`时，就会有问题了。比如，我们这样调用foo函数：
 
-
-
-```sh
+```javascript
 foo(0, "")
 ```
 
@@ -241,7 +231,7 @@ foo(0, "")
 
 
 
-```sh
+```javascript
 var name = 'Your name is ' + first + ' ' + last + '.'
 ```
 
@@ -249,7 +239,7 @@ var name = 'Your name is ' + first + ' ' + last + '.'
 
 
 
-```sh
+```javascript
 var name = `Your name is ${first} ${last}.`
 ```
 
@@ -265,7 +255,7 @@ var name = `Your name is ${first} ${last}.`
 
 
 
-```sh
+```javascript
 var foo = ["one", "two", "three", "four"];
 
 var [one, two, three] = foo;
@@ -290,7 +280,7 @@ console.log(b); // 2
 
 
 
-```sh
+```javascript
 var a, b;
 
 [a=5, b=7] = [1];
@@ -302,7 +292,7 @@ console.log(b); // 7
 
 
 
-```sh
+```javascript
 var a = 1;
 var b = 3;
 
@@ -315,7 +305,7 @@ console.log(b); // 1
 
 
 
-```sh
+```javascript
 const student = {
   name:'Ming',
   age:'18',
@@ -338,7 +328,7 @@ console.log(city); // "Shanghai"
 
 
 
-```sh
+```javascript
 myFunction(...iterableObj);
 ```
 
@@ -346,7 +336,7 @@ myFunction(...iterableObj);
 
 
 
-```sh
+```javascript
 [...iterableObj, '4', ...'hello', 6];
 ```
 
@@ -354,7 +344,7 @@ myFunction(...iterableObj);
 
 
 
-```sh
+```javascript
 let objClone = { ...obj };
 ```
 
@@ -364,7 +354,7 @@ let objClone = { ...obj };
 
 
 
-```sh
+```javascript
 function sum(x, y, z) {
   return x + y + z;
 }
@@ -383,7 +373,7 @@ console.log(sum(...numbers));// 6
 
 
 
-```sh
+```javascript
 const stuendts = ['Jine','Tom']; 
 const persons = ['Tony',... stuendts,'Aaron','Anna'];
 conslog.log(persions)// ["Tony", "Jine", "Tom", "Aaron", "Anna"]
@@ -395,7 +385,7 @@ conslog.log(persions)// ["Tony", "Jine", "Tom", "Aaron", "Anna"]
 
 
 
-```sh
+```javascript
 var arr = [1, 2, 3];
 var arr2 = [...arr]; // 等同于 arr.slice()
 arr2.push(4); 
@@ -408,7 +398,7 @@ console.log(arr2)//[1, 2, 3, 4]
 
 
 
-```sh
+```javascript
 var arr1 = [0, 1, 2];
 var arr2 = [3, 4, 5];
 var arr3 = [...arr1, ...arr2];// 将 arr2 中所有元素附加到 arr1 后面并返回
@@ -420,7 +410,7 @@ var arr4 = arr1.concat(arr2);
 
 
 
-```sh
+```javascript
 var obj1 = { foo: 'bar', x: 42 };
 var obj2 = { foo: 'baz', y: 13 };
 
@@ -438,7 +428,7 @@ var mergedObj = { ...obj1, ...obj2 };
 
 
 
-```sh
+```javascript
 <CustomComponent name ='Jine' age ={21} />
 ```
 
@@ -446,7 +436,7 @@ var mergedObj = { ...obj1, ...obj2 };
 
 
 
-```sh
+```javascript
 const params = {
     name: 'Jine',
     age: 21
@@ -458,7 +448,7 @@ const params = {
 
 
 
-```sh
+```javascript
 var params = {
     name: '123',
     title: '456',
@@ -472,7 +462,7 @@ var { type, ...other } = params;
 <CustomComponent type='normal' number={2} name='123' title='456' />
 ```
 
-### 8.对象属性简写
+####8.对象属性简写
 
 - 在ES6中允许我们在设置一个对象的属性的时候不指定属性名。
 
@@ -480,7 +470,7 @@ var { type, ...other } = params;
 
 
 
-```sh
+```javascript
 const name='Ming',age='18',city='Shanghai';
    
 const student = {
@@ -497,7 +487,7 @@ console.log(student);//{name: "Ming", age: "18", city: "Shanghai"}
 
 
 
-```sh
+```javascript
 const name='Ming',age='18',city='Shanghai';
   
 const student = {
@@ -520,7 +510,7 @@ console.log(student);//{name: "Ming", age: "18", city: "Shanghai"}
 
 
 
-```sh
+```javascript
 setTimeout(function()
 {
     console.log('Hello'); // 1秒后输出"Hello"
@@ -535,7 +525,7 @@ setTimeout(function()
 
 
 
-```sh
+```javascript
 var waitSecond = new Promise(function(resolve, reject)
 {
     setTimeout(resolve, 1000);
@@ -563,7 +553,7 @@ waitSecond
 
 
 
-```sh
+```javascript
 {
   var a = 10;
 }
@@ -573,7 +563,7 @@ console.log(a); // 输出10
 
 - 使用let与const定义的变量为块级作用域：
 
-```sh
+```javascript
 {
   let a = 10;
 }
