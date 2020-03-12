@@ -45,7 +45,7 @@
     路由懒加载，例：
 
 
-![](C:\Users\dell\Desktop\学习文档\vue首屏加速-路由懒加载.png)
+![vue首屏加速-路由懒加载](D:\myLearnHistory\常用工具和框架\vue\vue首屏加速-路由懒加载.png)
 
 
 
@@ -53,14 +53,14 @@
     组件懒加载，在vue实例中组件引入的时候添加。例：
 
 
-![](C:\Users\dell\Desktop\学习文档\vue首屏加速-组件懒加载.png)
+![vue首屏加速-组件懒加载](D:\myLearnHistory\常用工具和框架\vue\vue首屏加速-组件懒加载.png)
 
 
 
     全局懒加载，在项目中的mian.js中添加。例：
 
 
-![](C:\Users\dell\Desktop\学习文档\vue首屏加速-全局懒加载.png)
+![vue首屏加速-全局懒加载](D:\myLearnHistory\常用工具和框架\vue\vue首屏加速-全局懒加载.png)
 
 
 

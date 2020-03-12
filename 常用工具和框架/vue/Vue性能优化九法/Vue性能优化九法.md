@@ -28,7 +28,7 @@
 
 <keep-alive> 与 <transition>相似，只是一个抽象组件，它不会在DOM树中渲染(真实或者虚拟都不会)，也不在父组件链中存在，比如：你永远在 this.$parent 中找不到 keep-alive 。
 
-![img](C:\Users\ADMINI~1\AppData\Local\Temp\企业微信截图_15826324943291.png)
+![使用keepalive](D:\myLearnHistory\常用工具和框架\vue\Vue性能优化九法\使用keepalive.png)
 
 ## 六、延迟加载（defer）
 
@@ -62,4 +62,4 @@
 
 ## 十、总结
 
-![img](C:\Users\ADMINI~1\AppData\Local\Temp\企业微信截图_15826350894034.png)
+![总结](D:\myLearnHistory\常用工具和框架\vue\Vue性能优化九法\总结.png)
